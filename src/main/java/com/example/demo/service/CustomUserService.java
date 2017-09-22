@@ -14,6 +14,7 @@ public class CustomUserService implements UserDetailsService {
 
     @Autowired
     SysUserRepository userRepository;
+
     @Override
     public UserDetails loadUserByUsername(String s) throws UsernameNotFoundException {
         SysUser user = userRepository.findByUsername(s);
